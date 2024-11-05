@@ -5,10 +5,8 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-
+  run:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
 
@@ -24,9 +22,7 @@ jobs:
           npm run build
           touch out/.nojekyll
 
-      - name: Upload static files as artifact
-        id: deployment
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: main
           folder: out
