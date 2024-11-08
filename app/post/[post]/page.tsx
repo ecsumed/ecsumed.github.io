@@ -25,7 +25,7 @@ export default async function Page({
   const postID = (await params).post;
   const post = getPost(postID);
 
-  const day = post.createdAt.getDay()
+  const day = post.createdAt.getDate()
   const month = post.createdAt.toLocaleString('en-us', { month: 'short' })
   const year = post.createdAt.getFullYear()
 
