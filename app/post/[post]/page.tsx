@@ -25,10 +25,9 @@ export default async function Page({
   const postID = (await params).post;
   const post = getPost(postID);
 
-  const postDate = new Date(post?.createdAt);
-  const day = postDate.getDay()
-  const month = postDate.toLocaleString('en-us', { month: 'short' })
-  const year = postDate.getFullYear()
+  const day = post.createdAt.getDay()
+  const month = post.createdAt.toLocaleString('en-us', { month: 'short' })
+  const year = post.createdAt.getFullYear()
 
   if (!post) {
     return <p>Post not found.</p>

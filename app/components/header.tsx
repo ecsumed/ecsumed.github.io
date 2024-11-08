@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Header() {
     return (
-        <header id="header" className="mt-5">
+        <header id="header" className="">
             <nav className="">
                 <div className="flex align-middle">
                     <div className="flex align-middle">
