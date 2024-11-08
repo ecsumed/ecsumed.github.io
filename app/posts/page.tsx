@@ -12,14 +12,7 @@ export default function Page() {
     return (
 
         <div className='p-3 rounded bg-slate-300 dark:bg-zinc-800 dark:text-white'>
-            <TerminalCommand command={[
-                '$ ls -lggo',
-                1000,
-                '$ ls -lgo',
-                1000,
-            ]}></TerminalCommand>
-
-            <TerminalOutput>
+            <TerminalCommand command={["$ ls -lggo", "$ ls -lgo"]} delay={1000}>
                 {posts.map((post) => (
                     <div className='flex -ml-2 items-center'>
                         <Link className='transition delay-75 duration-300 ease-in-out hover:scale-110' href={`/post/${post.id}`} >
@@ -39,8 +32,7 @@ export default function Page() {
                         </div>
                     </div>
                 ))}
-            </TerminalOutput>
-
+            </TerminalCommand>
         </div >
     )
 }
