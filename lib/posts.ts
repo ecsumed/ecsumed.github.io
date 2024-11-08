@@ -50,6 +50,7 @@ function readFile(fileName: string) {
     const postDate = new Date(matterResult.data.date);
 
     return {
+        'content': matterResult.content,
         'createdAt': postDate,
         ...matterResult.data
     }

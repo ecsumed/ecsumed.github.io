@@ -39,7 +39,7 @@ export default async function Page({
         <Image width="0"
           height="0"
           sizes="100vw"
-          className="w-full h-48" src={`/content/images/${post.image}`} alt="Post header image">
+          className="w-full h-48" src={`/content/images/${post.img}`} alt="Post header image">
         </Image>
       </div>
 
