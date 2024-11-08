@@ -9,7 +9,7 @@ const interleave = (arr, thing) => [].concat(...arr.map(n => [n, thing])).slice(
 export const TerminalCommand = ({ command, delay, children }) => {
     const [showOutput, setShowOutput] = useState(false)
 
-    var seq = interleave(command, delay)
+    const seq = interleave(command, delay)
 
     seq.push(
         (el) => {
@@ -18,7 +18,7 @@ export const TerminalCommand = ({ command, delay, children }) => {
         }
     )
     return (
-        <div className='h-72'>
+        <div className=''>
             <TypeAnimation
                 sequence={seq}
                 wrapper="span"

@@ -2,9 +2,8 @@ import { getSortedPostsData } from '../../lib/posts';
 
 import Link from 'next/link'
 import Badge from '../components/badge';
-import Image from 'next/image';
 
-import { TerminalCommand, TerminalOutput } from '../components/terminal'
+import { TerminalCommand } from '../components/terminal'
 
 const posts = getSortedPostsData()
 
