@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from 'next-themes'
+
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/header";
@@ -25,17 +27,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
 
-        <div className="lg:mx-52 px-4">
-          <Header></Header>
+        <div className="lg:mx-52 px-4 mt-5">
+          <ThemeProvider><Header></Header></ThemeProvider>
         </div>
 
         <div className="lg:mx-52 px-4 mt-12">
-          {children}
+          <ThemeProvider>{children}</ThemeProvider>
         </div>
 
       </body>

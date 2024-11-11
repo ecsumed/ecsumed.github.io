@@ -1,8 +1,23 @@
 import type { NextConfig } from "next";
 
+const isGithubActions = process.env.GITHUB_ACTIONS || false
+const repoName = process.env.GITHUB_REPOSITORY || ""
+
+let assetPrefix = ''
+let basePath = ''
+
+if (isGithubActions) {
+  const repo = repoName.replace(/.*?\//, '')
+
+  assetPrefix = `/${repo}/`
+  basePath = `/${repo}`
+}
+
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: "/ecsumed",
+
+  assetPrefix: assetPrefix,
+  basePath: basePath,
 
   images: { unoptimized: true },
  

@@ -70,7 +70,7 @@ export function ImgRenderer(props: any) {
 
 export function LinkRenderer(props: any) {
     return (
-        <Link className="text-sky-500" as={props.alt} href={props.href}>
+        <Link className="text-sky-500 font-bold underline" as={props.alt} href={props.href}>
             {props.children}
         </Link>
     )

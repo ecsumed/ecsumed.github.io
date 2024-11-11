@@ -5,13 +5,22 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --terminal-background: #d4f3ecb3;
+  --terminal-text: black;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --tw-bg-opacity: 1;
     --background: #0a0a0a;
     --foreground: #ededed;
+    --terminal-background: rgb(39 39 42 / var(--tw-bg-opacity));
+    --terminal-text: #ffffff;
   }
+}
+
+{
+
 }
 
 body {
@@ -23,4 +32,9 @@ body {
 .markdown > * {
   all: revert;
   white-space: pre-wrap;
+}
+
+.terminal {
+  background: var(--terminal-background);
+  color: var(--terminal-text);
 }
