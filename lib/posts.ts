@@ -1,15 +1,18 @@
 import fs from 'fs';
 import path from 'path';
-import matter from 'gray-matter';
+import { readFile } from './markdown';
 
 const postsDirectory = path.join(process.cwd(), 'content/posts');
 
 export function getSortedPostsData() {
     // Get file names under /posts
     const fileNames = fs.readdirSync(postsDirectory);
+
     const allPostsData = fileNames.map((fileName) => {
+        const fullPath = path.join(postsDirectory, fileName);
+
         return {
-            ...readFile(fileName)
+            ...readFile(fullPath)
         };
     });
 
@@ -30,28 +33,13 @@ export function getPost(id: string) {
         // Remove ".md(x)" from file name to get id
         const fileID = fileName.replace(/\.mdx?$/, '');
 
+        const fullPath = path.join(postsDirectory, fileName);
         if (fileID == id) {
             return {
-                ...readFile(fileName)
+                ...readFile(fullPath)
             };
         }
     }
 
     return
-}
-
-function readFile(fileName: string) {
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-
-    // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents);
-
-    const postDate = new Date(matterResult.data.date);
-
-    return {
-        'content': matterResult.content,
-        'createdAt': postDate,
-        ...matterResult.data
-    }
 }
