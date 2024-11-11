@@ -19,9 +19,7 @@ type MarkdownRendererProps = {
 };
 
 export function MarkdownRenderer({ children: markdown }: MarkdownRendererProps) {
-  const { systemTheme, _ } = useTheme()
-
-  console.log(systemTheme)
+  const { systemTheme } = useTheme()
 
   const codeTheme = (systemTheme == 'light') ? github : dracula
 

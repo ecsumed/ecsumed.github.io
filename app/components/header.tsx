@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export default function Header() {
     return (
