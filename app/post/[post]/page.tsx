@@ -35,8 +35,8 @@ export default async function Page({
   }
 
   return (
-    <div className='p-3 rounded h-50 bg-slate-300 dark:bg-zinc-800 dark:text-white'>
-      <TerminalCommand command={[`$ cat posts/${postID}.md | renderHTML`]} delay={1000}>
+    <div className='p-3 rounded h-50 terminal'>
+      <TerminalCommand command={["$ ", `$ cat posts/${postID}.md | renderHTML`]} delay={1000}>
         <div className="min-h-screen p-2 font-[family-name:var(--font-geist-sans)]">
           <div className="">
             <Image width="0"

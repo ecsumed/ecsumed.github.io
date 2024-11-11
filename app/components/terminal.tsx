@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 const interleave = (arr, thing) => [].concat(...arr.map(n => [n, thing])).slice(0, -1)
 
-export const TerminalCommand = ({ command, delay, children }) => {
+export const TerminalCommand = ({ command, delay, children, preRenderFirstString=false}) => {
     const [showOutput, setShowOutput] = useState(false)
 
     const seq = interleave(command, delay)
@@ -20,6 +20,7 @@ export const TerminalCommand = ({ command, delay, children }) => {
     return (
         <div className=''>
             <TypeAnimation
+                preRenderFirstString={preRenderFirstString}
                 sequence={seq}
                 wrapper="span"
                 speed={25}
