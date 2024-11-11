@@ -1,3 +1,5 @@
+'use client'
+
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 /* eslint-disable  @typescript-eslint/no-unused-vars */
 
@@ -6,14 +8,23 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { dracula, github } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { BlockQuoteRenderer, H1Renderer, H2Renderer, H3Renderer, ImgRenderer, LiRenderer, LinkRenderer, TdRenderer, ThRenderer, UlRenderer } from './markdown_renderers';
+
+import { useTheme } from 'next-themes'
+
 
 type MarkdownRendererProps = {
   children: string;
 };
 
 export function MarkdownRenderer({ children: markdown }: MarkdownRendererProps) {
+  const { systemTheme, _ } = useTheme()
+
+  console.log(systemTheme)
+
+  const codeTheme = (systemTheme == 'light') ? github : dracula
+
   return (
     <Markdown
       remarkPlugins={[remarkGfm]}
@@ -31,7 +42,7 @@ export function MarkdownRenderer({ children: markdown }: MarkdownRendererProps) 
             )
           } else if (!inline && match) {
             return (
-              <SyntaxHighlighter style={dracula} PreTag="div" language={match[1]} {...props}>
+              <SyntaxHighlighter style={codeTheme} PreTag="div" language={match[1]} {...props}>
                 {String(children).replace(/\n$/, '')}
               </SyntaxHighlighter>
             )
@@ -59,4 +70,3 @@ export function MarkdownRenderer({ children: markdown }: MarkdownRendererProps) 
     </Markdown>
   );
 }
-
