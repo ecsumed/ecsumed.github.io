@@ -1,3 +1,5 @@
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+
 import { getSortedPostsData } from '../../lib/posts';
 
 import Link from 'next/link'
@@ -5,7 +7,7 @@ import Badge from '../components/badge';
 
 import { TerminalCommand } from '../components/terminal'
 
-const posts = getSortedPostsData();
+const posts: any = getSortedPostsData();
 
 export default function Page() {
     return (

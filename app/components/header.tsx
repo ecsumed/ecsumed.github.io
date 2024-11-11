@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export default function Header() {
     return (
@@ -23,7 +22,7 @@ export default function Header() {
                             </li>
                             <li className="content-center">
                                 <Link href="/about" className="px-3 group transition-all duration-300 ease-in-out">
-                                    <span className="bg-left-bottom bg-gradient-to-r from-amber-600 to-amber-600 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                    <span className="wwss bg-gradient-to-r from-amber-600 to-amber-600 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
                                         About
                                     </span>
                                 </Link>

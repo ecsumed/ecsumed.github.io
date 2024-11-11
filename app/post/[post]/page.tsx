@@ -1,3 +1,5 @@
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+
 import { MarkdownRenderer } from '@/app/components/markdown';
 import { getPost, getSortedPostsData } from '../../../lib/posts';
 
@@ -9,7 +11,7 @@ import { TerminalCommand } from '@/app/components/terminal';
 
 
 export async function generateStaticParams() {
-  const posts = getSortedPostsData()
+  const posts: any = getSortedPostsData()
 
   const paths = posts.map((post) => ({
     post: post.id.toString()
@@ -24,7 +26,7 @@ export default async function Page({
   params: Promise<{ post: string }>
 }) {
   const postID = (await params).post;
-  const post = getPost(postID);
+  const post: any = getPost(postID);
 
   const day = post.createdAt.getDate()
   const month = post.createdAt.toLocaleString('en-us', { month: 'short' })
