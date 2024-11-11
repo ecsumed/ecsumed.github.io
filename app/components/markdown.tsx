@@ -8,7 +8,9 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { dracula, github } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { github } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+
 import { BlockQuoteRenderer, H1Renderer, H2Renderer, H3Renderer, ImgRenderer, LiRenderer, LinkRenderer, TdRenderer, ThRenderer, UlRenderer } from './markdown_renderers';
 
 import { useTheme } from 'next-themes'
