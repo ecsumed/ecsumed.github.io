@@ -8,13 +8,11 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import { github } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import { tomorrow, prism } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 import { BlockQuoteRenderer, H1Renderer, H2Renderer, H3Renderer, ImgRenderer, LiRenderer, LinkRenderer, TdRenderer, ThRenderer, UlRenderer } from './markdown_renderers';
 
 import { useTheme } from 'next-themes'
-
 
 type MarkdownRendererProps = {
   children: string;
@@ -23,7 +21,7 @@ type MarkdownRendererProps = {
 export function MarkdownRenderer({ children: markdown }: MarkdownRendererProps) {
   const { systemTheme } = useTheme()
 
-  const codeTheme = (systemTheme == 'light') ? github : dracula
+  const codeTheme = (systemTheme == 'light') ? prism : tomorrow
 
   return (
     <Markdown
@@ -42,7 +40,11 @@ export function MarkdownRenderer({ children: markdown }: MarkdownRendererProps) 
             )
           } else if (!inline && match) {
             return (
-              <SyntaxHighlighter style={codeTheme} PreTag="div" language={match[1]} {...props}>
+              <SyntaxHighlighter
+                style={codeTheme}
+                PreTag="div"
+                language={match[1]}
+                {...props}>
                 {String(children).replace(/\n$/, '')}
               </SyntaxHighlighter>
             )
