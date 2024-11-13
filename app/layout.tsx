@@ -36,7 +36,7 @@ export default function RootLayout({
           <ThemeProvider><Header></Header></ThemeProvider>
         </div>
 
-        <div className="lg:mx-52 px-4 mt-12">
+        <div className="lg:mx-52 px-4 mt-12 mx-auto">
           <ThemeProvider>{children}</ThemeProvider>
         </div>
 

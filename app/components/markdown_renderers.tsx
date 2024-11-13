@@ -63,7 +63,7 @@ export function LiRenderer(children: React.ReactNode) {
 
 export function ImgRenderer(props: any) {
     return (
-        <Image src={props.src!} alt={props.alt!} width={1200} height={200} />
+        <img className="inline-flex m-2" src={props.src!} alt={props.alt!}/>
     )
 }
 
