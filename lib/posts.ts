@@ -4,17 +4,23 @@ import { readFile } from './markdown';
 
 const postsDirectory = path.join(process.cwd(), 'content/posts');
 
-export function getSortedPostsData() {
+export function getSortedPostsData(tagFilter: string = "") {
     // Get file names under /posts
     const fileNames = fs.readdirSync(postsDirectory);
 
-    const allPostsData = fileNames.map((fileName) => {
+    let allPostsData = fileNames.map((fileName) => {
         const fullPath = path.join(postsDirectory, fileName);
 
         return {
             ...readFile(fullPath)
         };
     });
+
+    if (tagFilter != "") {
+        const filteredPostData = allPostsData.filter(post => post.tags.includes(tagFilter));
+
+        allPostsData = filteredPostData;
+    }
 
     // Sort posts by date
     return allPostsData.sort((a, b) => {
@@ -42,4 +48,21 @@ export function getPost(id: string) {
     }
 
     return
+}
+
+export function getAllPostTags() {
+    // Get file names under /posts
+    const fileNames = fs.readdirSync(postsDirectory);
+
+    var allTags = []
+    fileNames.map((fileName) => {
+        const fullPath = path.join(postsDirectory, fileName);
+
+        allTags = [ ...allTags, ...readFile(fullPath).tags];
+    });
+
+    const uniqueTags = new Set(allTags);
+
+    return Array.from(uniqueTags.values());
+    ;
 }
