@@ -1,3 +1,5 @@
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+
 import fs from 'fs';
 import path from 'path';
 import { readFile } from './markdown';
@@ -17,7 +19,7 @@ export function getSortedPostsData(tagFilter: string = "") {
     });
 
     if (tagFilter != "") {
-        const filteredPostData = allPostsData.filter(post => post.tags.includes(tagFilter));
+        const filteredPostData = allPostsData.filter(post => (post as any).tags.includes(tagFilter));
 
         allPostsData = filteredPostData;
     }
@@ -54,11 +56,13 @@ export function getAllPostTags() {
     // Get file names under /posts
     const fileNames = fs.readdirSync(postsDirectory);
 
-    var allTags = []
+    let allTags = []
     fileNames.map((fileName) => {
         const fullPath = path.join(postsDirectory, fileName);
 
-        allTags = [ ...allTags, ...readFile(fullPath).tags];
+        const post: any = readFile(fullPath)
+
+        allTags = [ ...allTags, ...post.tags];
     });
 
     const uniqueTags = new Set(allTags);

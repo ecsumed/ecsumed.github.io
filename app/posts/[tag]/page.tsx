@@ -18,12 +18,12 @@ export async function generateStaticParams() {
 export default async function Page({
   params,
 }: {
-  params: Promise<{ post: string }>
+  params: Promise<{ tag: string }>
 }) {
 
   const tag = (await params).tag;
 
-  const filteredPosts = getSortedPostsData(tag);
+  const filteredPosts: any = getSortedPostsData(tag);
 
   if (!tag) {
     return <p>Tag not found.</p>
