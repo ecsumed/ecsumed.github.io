@@ -53,8 +53,8 @@ export default async function Page({
               <span className='text-4xl'>{post.title}</span>
             </div>
 
-            <div className='grid grid-cols-2'>
-              <div className='content-center'>
+            <div className='grid max-md:mt-2 md:grid-cols-2'>
+              <div className='max-md:block content-center'>
                 {post.tags.map((tag: string) => (
                   <Link href={`/posts/${tag}`}>
                     <Badge color="green" text={tag}></Badge>
@@ -62,8 +62,8 @@ export default async function Page({
                 ))}
               </div>
 
-              <div className="pr-2 flex justify-end">
-                <span className='text-lg'>{month} {day}, {year} </span>
+              <div className="pr-2 max-md:mt-2">
+                <span className='text-lg md:float-right'>{month} {day}, {year} </span>
               </div>
             </div>
 
