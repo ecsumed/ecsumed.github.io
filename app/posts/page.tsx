@@ -27,7 +27,7 @@ export default function Page() {
                         <div className='flex max-md:mt-2'>
                             {post.tags.map((tag: string) => (
                                 <Link href={`/posts/${tag}`} className='transition delay-0 duration-150 ease-in-out hover:scale-110'>
-                                    <Badge color="green" text={tag}></Badge>
+                                    <Badge text={tag}></Badge>
                                 </Link>
                             ))}
                         </div>
