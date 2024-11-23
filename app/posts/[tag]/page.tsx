@@ -1,10 +1,8 @@
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 
-import Badge from "@/app/components/badge";
 import { TerminalCommand } from "@/app/components/terminal";
 import { ListPost } from "@/app/components/terminal_ls_line";
 import { getAllPostTags, getSortedPostsData } from "@/lib/posts";
-import Link from "next/link";
 
 export async function generateStaticParams() {
   const tags: string[] = getAllPostTags()
