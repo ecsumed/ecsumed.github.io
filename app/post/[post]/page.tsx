@@ -54,7 +54,7 @@ export default async function Page({
             </div>
 
             <div className='grid max-md:mt-2 md:grid-cols-2'>
-              <div className='max-md:block content-center'>
+              <div className='flex flex-wrap align-middle content-center'>
                 {post.tags.map((tag: string) => (
                   <Link href={`/posts/${tag}`}>
                     <Badge text={tag}></Badge>
