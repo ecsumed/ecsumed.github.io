@@ -57,7 +57,7 @@ export default async function Page({
               <div className='max-md:block content-center'>
                 {post.tags.map((tag: string) => (
                   <Link href={`/posts/${tag}`}>
-                    <Badge color="green" text={tag}></Badge>
+                    <Badge text={tag}></Badge>
                   </Link>
                 ))}
               </div>
