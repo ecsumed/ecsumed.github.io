@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ThemeSwitch from "./theme_switcher";
 
 export default function Header() {
     return (
@@ -10,6 +11,9 @@ export default function Header() {
                             <span className="self-center text-2xl text-teal-600 dark:text-teal-100">Fahad</span>
                             <span className="self-center text-2xl font-semibold text-teal-600 dark:text-emerald-500">Saleh</span>
                         </a>
+                    </div>
+                    <div>
+                    <ThemeSwitch></ThemeSwitch>
                     </div>
                     <div className="flex-1 flex justify-end">
                         <ul className="flex">

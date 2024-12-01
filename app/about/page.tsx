@@ -18,9 +18,7 @@ export default function Page() {
                         {fileContents.content}
                     </MarkdownRenderer>
                 </div>
-
             </TerminalCommand>
         </div >
     )
 }
-

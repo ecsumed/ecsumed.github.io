@@ -25,6 +25,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+[data-theme='dark'] {
+  --tw-bg-opacity: 1;
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --terminal-background: rgb(39 39 42 / var(--tw-bg-opacity));
+  --terminal-text: #ffffff;
+}
+
 .markdown > * {
   all: revert;
   white-space: pre-wrap;
