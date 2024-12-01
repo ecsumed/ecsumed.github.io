@@ -99,6 +99,6 @@ void main() {
     // Use the noise function
     float n = noise(pos + uTime);
 
-    gl_FragColor = vec4(n, n, n, 1.0);
+    gl_FragColor = vec4(n, n, n, 0.5);
 }
 `
