@@ -17,5 +17,6 @@ const config: Config = {
   plugins: [
     require('@tailwindcss/typography'),
   ],
+  darkMode: ['[data-theme="dark"]']
 };
 export default config;
