@@ -29,7 +29,7 @@ export default async function Page({
   }
 
   return (
-    <div className='p-2 terminal'>
+    <div className='p-5 terminal'>
       <TerminalCommand command={["$ ", "$ ls -lgo", `$ ls -lgo | grep ${tag}`]} delay={1000} preRenderFirstString={true}>
         {filteredPosts.map((post) => (
           <ListPost post={post} />

@@ -19,9 +19,9 @@ type MarkdownRendererProps = {
 };
 
 export function MarkdownRenderer({ children: markdown }: MarkdownRendererProps) {
-  const { systemTheme } = useTheme()
+  const { resolvedTheme } = useTheme()
 
-  const codeTheme = (systemTheme == 'light') ? prism : tomorrow
+  const codeTheme = (resolvedTheme == 'light') ? prism : tomorrow
 
   return (
     <Markdown

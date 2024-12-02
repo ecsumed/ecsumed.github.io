@@ -11,7 +11,7 @@ export default function Page() {
 
     return (
 
-        <div className='p-2 h-50 terminal'>
+        <div className='p-5 h-50 terminal'>
             <TerminalCommand command={["$ whoami && cat about-me.md | renderHTML"]} delay={1000}>
                 <div className='mt-6 mb-16 p-6 rounded bg-slate-50 text-black dark:bg-zinc-900 dark:text-white'>
                     <MarkdownRenderer>
