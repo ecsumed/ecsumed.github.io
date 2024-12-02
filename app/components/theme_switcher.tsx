@@ -6,7 +6,6 @@
 import { useState, useEffect, Dispatch, SetStateAction, useRef } from 'react'
 import { useTheme } from 'next-themes'
 
-
 const options = ['light', 'dark', 'system'];
 
 const ThemeSwitch = () => {
@@ -35,9 +34,10 @@ const ThemeSwitch = () => {
                         type="checkbox"
                         checked={i === selected}
                         onChange={() => onChange(i)}
-                        className="mb-1"
+                        className="mb-1 appearance-none w-3 h-3 border-solid border-2 border-gray-950 dark:border-stone-100 checked:bg-gray-500"
+                        id={`checkbox-${i}`}
                     />
-                    <label className="mb-1" key={i}>
+                    <label for={`checkbox-${i}`} className="mb-1 capitalize" key={i}>
                         {o}
                     </label>
                 </div>

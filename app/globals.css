@@ -5,7 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --terminal-background: #f1f0ebb3;
+  --terminal-background: #f1f0eb64;
   --terminal-text: black;
 }
 
@@ -23,7 +23,7 @@
   --tw-bg-opacity: 1;
   --background: #000000;
   --foreground: #ededed;
-  --terminal-background: #413f35b3;
+  --terminal-background: #413f35a2;
   --terminal-text: #ffffff;
 }
 
