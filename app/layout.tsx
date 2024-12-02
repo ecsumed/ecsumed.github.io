@@ -4,6 +4,7 @@ import { ThemeProvider } from 'next-themes'
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/header";
+import ThemeSwitch from "./components/theme_switcher";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,12 +33,20 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider
-          defaultTheme="system"
+          attribute="class"
+          defaultTheme="dark"
           enableSystem
         >
-          <div className="lg:mx-36 xl:mx-52 px-4 mt-12 mx-auto">
-            <Header></Header>
-            {children}
+          <div className="">
+            <div className="">
+              <div className="m-16 border-solid border-4 border-gray-600 dark:border-white">
+                <Header></Header>
+                {children}
+              </div>
+              <div className="absolute bottom-0 right-0">
+                <ThemeSwitch></ThemeSwitch>
+              </div>
+            </div>
           </div>
         </ThemeProvider>
       </body>

@@ -3,12 +3,22 @@
 
 "use client"
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Dispatch, SetStateAction, useRef } from 'react'
 import { useTheme } from 'next-themes'
+
+
+const options = ['light', 'dark', 'system'];
 
 const ThemeSwitch = () => {
     const [mounted, setMounted] = useState(false)
     const { theme, setTheme } = useTheme()
+
+    const [selected, setSelected] = useState(options.indexOf(theme));
+
+    function onChange(i) {        
+        setTheme(options[i])
+        setSelected((prev) => (i === prev ? i : i));
+    }
 
     useEffect(() => {
         setMounted(true)
@@ -17,14 +27,21 @@ const ThemeSwitch = () => {
     if (!mounted) {
         return null
     }
-
     return (
-        <select value={theme} onChange={e => setTheme(e.target.value)}>
-            <option value="system">System</option>
-            <option value="dark">Dark</option>
-            <option value="light">Light</option>
-        </select>
+        <div className='rotate-90 flex'>
+            {options.map((o, i) => (
+                <div className="px-1">
+                    <input
+                        type="checkbox"
+                        checked={i === selected}
+                        onChange={() => onChange(i)}
+                    />
+                    <label key={i}>
+                        {o}
+                    </label>
+                </div>
+            ))}
+        </div>
     )
 }
-
 export default ThemeSwitch
