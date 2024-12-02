@@ -47,7 +47,7 @@ export default function RootLayout({
               </div>
 
             </div>
-            <div className="mt-6 absolute top-10 right-10 vertical-text">
+            <div className="mt-6 fixed top-10 right-10 vertical-text">
               <ThemeSwitch></ThemeSwitch>
             </div>
           </div>
