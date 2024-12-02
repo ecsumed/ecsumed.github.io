@@ -38,7 +38,7 @@ export default function RootLayout({
           enableSystem
         >
           <div>
-            <div className="relative m-16 border-solid border-2 border-stone-700 dark:border-stone-100">
+            <div className="relative m-16 border-solid border border-stone-700 dark:border-[#e5e1e1]">
               <div className="-mt-6">
                 <Header></Header>
               </div>
