@@ -18,7 +18,7 @@ export default function Home() {
         <div className="col-span-3 max-w-full"></div>
 
         <div className="col-span-1 flex md:justify-end">
-          <span className=" text-neutral-400">DevOps | SRE | Platform</span>
+          <span className="text-neutral-600 dark:text-neutral-400">DevOps | SRE | Platform</span>
         </div>
         <div className="col-span-3 max-w-full"></div>
 
