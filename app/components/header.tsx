@@ -5,12 +5,12 @@ export default function Header() {
         <header id="header" className="">
             <nav className="">
                 <div className="flex align-middle">
-                    <div className="flex align-middle">
+                    {/* <div className="flex align-middle">
                         <a href="" className="py-2">
                             <span className="self-center text-2xl text-teal-600 dark:text-teal-100">Fahad</span>
                             <span className="self-center text-2xl font-semibold text-teal-600 dark:text-emerald-500">Saleh</span>
                         </a>
-                    </div>
+                    </div> */}
                     <div className="flex-1 flex justify-end">
                         <ul className="flex">
                             <li className="content-center">

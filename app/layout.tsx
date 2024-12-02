@@ -37,15 +37,18 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem
         >
-          <div className="">
-            <div className="">
-              <div className="m-16 border-solid border-4 border-gray-600 dark:border-white">
+          <div>
+            <div className="relative m-16 border-solid border-2 border-stone-700 dark:border-stone-100">
+              <div className="-mt-6">
                 <Header></Header>
+              </div>
+              <div className="">
                 {children}
               </div>
-              <div className="absolute bottom-0 right-0">
-                <ThemeSwitch></ThemeSwitch>
-              </div>
+
+            </div>
+            <div className="mt-6 absolute top-10 right-10 vertical-text">
+              <ThemeSwitch></ThemeSwitch>
             </div>
           </div>
         </ThemeProvider>

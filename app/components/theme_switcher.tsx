@@ -28,15 +28,16 @@ const ThemeSwitch = () => {
         return null
     }
     return (
-        <div className='rotate-90 flex'>
+        <div className='flex'>
             {options.map((o, i) => (
-                <div className="px-1">
+                <div className="">
                     <input
                         type="checkbox"
                         checked={i === selected}
                         onChange={() => onChange(i)}
+                        className="mb-1"
                     />
-                    <label key={i}>
+                    <label className="mb-1" key={i}>
                         {o}
                     </label>
                 </div>
