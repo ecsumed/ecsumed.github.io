@@ -29,7 +29,7 @@ const ThemeSwitch = () => {
     return (
         <div className='flex'>
             {options.map((o, i) => (
-                <div className="">
+                <div className="" key={i}>
                     <input
                         type="checkbox"
                         checked={i === selected}
@@ -37,7 +37,7 @@ const ThemeSwitch = () => {
                         className="mb-1 appearance-none w-3 h-3 border-solid border-2 border-gray-950 dark:border-stone-100 checked:bg-gray-500"
                         id={`checkbox-${i}`}
                     />
-                    <label for={`checkbox-${i}`} className="mb-1 capitalize" key={i}>
+                    <label htmlFor={`checkbox-${i}`} className="mb-2 capitalize">
                         {o}
                     </label>
                 </div>
