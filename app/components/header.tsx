@@ -14,6 +14,10 @@ const items = [
         "link": "/posts"
     },
     {
+        "name": "Experiment",
+        "link": "/playground"
+    },
+    {
         "name": "About",
         "link": "/about"
     }
@@ -40,7 +44,7 @@ function MenuItem({ link, displayValue }) {
     }
 
     return (
-        <li className="w-12 flex justify-center px-3 last:pl-3 last:pr-0">
+        <li className="max-md:min-w-12 flex justify-center px-3 last:pl-3 last:pr-0">
             {item}
         </li>
     )
