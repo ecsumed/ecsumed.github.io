@@ -1,5 +1,4 @@
 import localFont from "next/font/local";
-import { redirect } from "next/navigation";
 
 const printClearlySans = localFont({
   src: "./fonts/PrintClearly.woff",

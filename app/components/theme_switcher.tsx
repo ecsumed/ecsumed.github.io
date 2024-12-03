@@ -3,7 +3,7 @@
 
 "use client"
 
-import { useState, useEffect, Dispatch, SetStateAction, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
 
 const options = ['light', 'dark', 'system'];
