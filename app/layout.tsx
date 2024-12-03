@@ -50,6 +50,11 @@ export default function RootLayout({
             <div className="mt-6 fixed top-2 right-2 md:top-10 md:right-10 vertical-text">
               <ThemeSwitch></ThemeSwitch>
             </div>
+            <div className="mt-6 fixed bottom-2 left-2 md:bottom-12 md:left-16 font-thin">
+              <span className="font-thin text-sm text-slate-500 dark:text-neutral-400">
+              All code my own. Snippets borrowed here and there. Inspired by <a className="underline" href="https://p5aholic.me/">Keita Yamada</a>
+              </span>
+            </div>
           </div>
         </ThemeProvider>
       </body>
