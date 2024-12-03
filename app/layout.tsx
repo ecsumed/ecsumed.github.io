@@ -53,8 +53,11 @@ export default function RootLayout({
               <div className="col-start-2 flex-col border-solid border border-stone-700 dark:border-[#e5e1e1]">
                 {children}
               </div>
-              <div className="vertical-text content-end pt-1">
-                <ThemeSwitch></ThemeSwitch>
+              <div className="sticky">
+                <div className="fixed vertical-text content-end pt-1">
+                  <ThemeSwitch></ThemeSwitch>
+                </div>
+
               </div>
             </div>
 
