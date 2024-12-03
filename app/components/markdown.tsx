@@ -41,6 +41,8 @@ export function MarkdownRenderer({ children: markdown }: MarkdownRendererProps) 
           } else if (!inline && match) {
             return (
               <SyntaxHighlighter
+                lineProps={{ style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' } }}
+                wrapLines={true}
                 style={codeTheme}
                 PreTag="div"
                 language={match[1]}

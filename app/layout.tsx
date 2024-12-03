@@ -37,7 +37,44 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem
         >
-          <div>
+
+
+          <div className="h-screen flex flex-col">
+            <div className="grid grid-cols-[3fr_94fr_3fr] mt-8">
+              <div className=""></div>
+              <div className="col-start-2 pr-1">
+                <Header></Header>
+              </div>
+              <div className=""></div>
+            </div>
+
+            <div className="flex-1 grid grid-cols-[3fr_94fr_3fr] overflow-y-auto">
+              <div className=""></div>
+              <div className="col-start-2 flex-col border-solid border border-stone-700 dark:border-[#e5e1e1]">
+                {children}
+              </div>
+              <div className="vertical-text content-end pt-1">
+                <ThemeSwitch></ThemeSwitch>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-[3fr_94fr_3fr] mb-10">
+              <div className="col-start-2">
+                <span className="pl-1 font-thin text-sm text-slate-500 dark:text-neutral-400">
+                  All code my own. Snippets borrowed here and there. Inspired by <a className="underline" href="https://p5aholic.me/">Keita Yamada</a>
+                </span>
+              </div>
+              <div className=""></div>
+            </div>
+          </div>
+
+        </ThemeProvider>
+      </body>
+    </html >
+  );
+}
+
+/* <div>
             <div className="relative m-8 md:m-16 border-solid border border-stone-700 dark:border-[#e5e1e1]">
               <div className="-mt-6">
                 <Header></Header>
@@ -55,9 +92,4 @@ export default function RootLayout({
               All code my own. Snippets borrowed here and there. Inspired by <a className="underline" href="https://p5aholic.me/">Keita Yamada</a>
               </span>
             </div>
-          </div>
-        </ThemeProvider>
-      </body>
-    </html >
-  );
-}
+          </div> */
