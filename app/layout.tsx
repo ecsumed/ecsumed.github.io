@@ -38,7 +38,7 @@ export default function RootLayout({
           enableSystem
         >
           <div>
-            <div className="relative m-16 border-solid border border-stone-700 dark:border-[#e5e1e1]">
+            <div className="relative m-8 md:m-16 border-solid border border-stone-700 dark:border-[#e5e1e1]">
               <div className="-mt-6">
                 <Header></Header>
               </div>
@@ -47,7 +47,7 @@ export default function RootLayout({
               </div>
 
             </div>
-            <div className="mt-6 fixed top-10 right-10 vertical-text">
+            <div className="mt-6 fixed top-2 right-2 md:top-10 md:right-10 vertical-text">
               <ThemeSwitch></ThemeSwitch>
             </div>
           </div>
