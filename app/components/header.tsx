@@ -38,7 +38,7 @@ function MenuItem({ link, displayValue }) {
     } else {
         item = (
             <span className="">
-                -
+                {"-".repeat(displayValue.length)}
             </span>
         )
     }

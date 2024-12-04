@@ -39,7 +39,7 @@ export default function RootLayout({
         >
 
 
-          <div className="h-screen flex flex-col  overflow-y-auto"  style={{ scrollbarGutter: "stable" }}>
+          <div className="h-screen flex flex-col">
             <div className="grid grid-cols-[3fr_94fr_3fr] mt-8">
               <div className=""></div>
               <div className="col-start-2 pr-3 md:pr-5">
@@ -48,7 +48,7 @@ export default function RootLayout({
               <div className=""></div>
             </div>
 
-            <div className="flex-1 grid grid-cols-[3fr_94fr_3fr]">
+            <div className="flex-1 grid grid-cols-[3fr_94fr_3fr] overflow-y-auto"  style={{ scrollbarGutter: "stable" }}>
               <div className=""></div>
               <div className="col-start-2 flex-col border-solid border border-stone-700 dark:border-[#e5e1e1]">
                 {children}
