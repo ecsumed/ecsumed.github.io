@@ -10,7 +10,7 @@ const posts: any = getSortedPostsData();
 export default function Page() {
     return (
 
-        <div className='p-5 terminal'>
+        <div className='p-5 terminal h-full'>
             <TerminalCommand command={["$ ", "$ ls -lggo", "$ ls -lgo"]} delay={1000} preRenderFirstString={true}>
                 {posts.map((post) => (
                     <ListPost post={post}/>

@@ -37,7 +37,7 @@ export default async function Page({
   }
 
   return (
-    <div className='px-5 pt-5 terminal'>
+    <div className='px-5 pt-5 terminal h-full'>
       <TerminalCommand command={["$ ", `$ cat posts/${postID}.md | renderHTML`]} delay={1000}>
       <div className="p-2 font-[family-name:var(--font-geist-sans)]">
           <div className="">
