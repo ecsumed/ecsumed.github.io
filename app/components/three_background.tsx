@@ -4,7 +4,7 @@
 "use client"
 
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
 
 import { vertex, fragment } from './js/shader.js'
@@ -29,17 +29,17 @@ const ThreeBackground: React.FC = () => {
     })
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
+        if (typeof window !== 'undefined' && containerRef.current.childElementCount == 0) {
             var axis = new THREE.Vector3(0.1, 1, 0).normalize();
 
             const width = containerRef.current.parentElement.parentElement.clientWidth;
             const height = containerRef.current.parentElement.parentElement.clientHeight;
 
             const scene = new THREE.Scene();
-            scene.background = new THREE.Color( 0x000000 );
+            scene.background = new THREE.Color(0x000000);
 
 
-            const renderer = new THREE.WebGLRenderer({ antialias: true,  });
+            const renderer = new THREE.WebGLRenderer({ antialias: true, });
             renderer.autoClearColor = true;
 
             renderer.setSize(width, height);
@@ -80,7 +80,7 @@ const ThreeBackground: React.FC = () => {
 
                 uniforms.current.u_time.value %= 5;
 
-                sphere.rotateOnAxis(axis, timeIncrement/ 10);
+                sphere.rotateOnAxis(axis, timeIncrement / 10);
 
                 renderer.render(scene, camera);
                 requestAnimationFrame(renderScene);
@@ -90,8 +90,8 @@ const ThreeBackground: React.FC = () => {
             renderScene();
 
             const handleResize = () => {
-                const width = window.innerWidth;
-                const height = window.innerHeight / 1.5;
+                const width = containerRef.current.parentElement.parentElement.clientWidth;
+                const height = containerRef.current.parentElement.parentElement.clientHeight;
 
                 camera.aspect = width / height;
                 camera.updateProjectionMatrix();
