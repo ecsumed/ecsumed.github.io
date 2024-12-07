@@ -11,27 +11,27 @@ const res = 800;
 const grid = 600;
 const amplitude = 15;
 const waveLength = .5;
-const zIndex = 50;
+const zIndex = 80;
 const timeIncrement = .008;
 
 const ThreeBackground: React.FC = () => {
     const containerRef = useRef<HTMLDivElement>(null);
 
     const uniforms = useRef({
-        uAmplitude: { value: amplitude },
-        uWaveLength: { value: waveLength },
-        uZIndex: { value: zIndex },
-        uGridSize: { value: grid },
-        uTime: { value: 0 },
-        uResolution: { value: new THREE.Vector2(res, res) },
+        u_amplitude: { value: amplitude },
+        u_waveLength: { value: waveLength },
+        u_zIndex: { value: zIndex },
+        u_gridSize: { value: grid },
+        u_time: { value: 0 },
+        u_resolution: { value: new THREE.Vector2(res, res) },
     })
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
             var axis = new THREE.Vector3(0.1, 1, 0).normalize();
 
-            const width = containerRef.current.clientWidth;
-            const height = containerRef.current.clientWidth / 1.5;
+            const width = containerRef.current.parentElement.parentElement.clientWidth;
+            const height = containerRef.current.parentElement.parentElement.clientHeight;
 
             const scene = new THREE.Scene();
             scene.background = new THREE.Color( 0x000000 );
@@ -48,7 +48,7 @@ const ThreeBackground: React.FC = () => {
 
             const camera = new THREE.PerspectiveCamera(45, width / height, 1, 5000);
 
-            camera.position.z = uniforms.current.uZIndex.value;
+            camera.position.z = uniforms.current.u_zIndex.value;
             camera.position.x = 10;
             camera.position.y = 15;
 
@@ -74,7 +74,9 @@ const ThreeBackground: React.FC = () => {
 
             // Add this function inside the useEffect hook
             const renderScene = () => {
-                uniforms.current.uTime.value += timeIncrement;
+                uniforms.current.u_time.value += timeIncrement;
+
+                uniforms.current.u_time.value %= 5;
 
                 sphere.rotateOnAxis(axis, timeIncrement/ 10);
 

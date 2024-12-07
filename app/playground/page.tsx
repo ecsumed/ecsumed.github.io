@@ -5,7 +5,7 @@ import ThreeBackground from "../components/three_background";
 export default function Page() {
     return (
 
-        <div className=''>
+        <div className="">
             <ThreeBackground></ThreeBackground>
         </div >
     )
