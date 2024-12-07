@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/header";
 import ThemeSwitch from "./components/theme_switcher";
+import ThreeBackground from "./components/three_background";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -48,10 +49,16 @@ export default function RootLayout({
               <div className=""></div>
             </div>
 
-            <div className="flex-1 grid grid-cols-[3fr_94fr_3fr] overflow-y-auto"  style={{ scrollbarGutter: "stable" }}>
+            <div className="flex-1 grid grid-cols-[3fr_94fr_3fr] overflow-y-auto" style={{ scrollbarGutter: "stable" }}>
               <div className=""></div>
-              <div className="col-start-2 flex-col border-solid border border-stone-700 dark:border-[#e5e1e1]">
-                {children}
+              <div className="relative col-start-2 flex-col border-solid border border-stone-700 dark:border-[#e5e1e1]">
+                <div className="absolute top-0 left-0">
+                  <ThreeBackground></ThreeBackground>
+                </div>
+                <div className="absolute top-0 left-0">
+                  {children}
+                </div>
+
               </div>
               <div className="sticky">
                 <div className="fixed vertical-text content-end pt-1">

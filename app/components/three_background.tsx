@@ -1,6 +1,8 @@
 /* eslint-disable */
 //temporary disable rules
 
+"use client"
+
 
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
@@ -12,7 +14,7 @@ const grid = 600;
 const amplitude = 15;
 const waveLength = .5;
 const zIndex = 80;
-const timeIncrement = .008;
+const timeIncrement = .002;
 
 const ThreeBackground: React.FC = () => {
     const containerRef = useRef<HTMLDivElement>(null);
