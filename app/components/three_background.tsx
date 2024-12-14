@@ -47,18 +47,18 @@ const ThreeBackground: React.FC = () => {
 
             containerRef.current?.appendChild(renderer.domElement);
 
-            // const camera = new OrthographicCamera(-res * 0.5, res * 0.5, res * 0.5, -res * 0.5, -5, 1000);
+            const camera = new THREE.OrthographicCamera(-100, 100, 100, -100, -80, 100);
 
-            const camera = new THREE.PerspectiveCamera(45, width / height, 1, 5000);
+            //const camera = new THREE.PerspectiveCamera(45, width / height, 1, 5000);
 
-            camera.position.z = uniforms.current.u_zIndex.value;
-            camera.position.x = 10;
-            camera.position.y = 15;
+            // camera.position.z = uniforms.current.u_zIndex.value;
+            // camera.position.x = 10;
+            // camera.position.y = 15;
 
-            // const plane = new THREE.PlaneGeometry(width, height, uniforms.current.uGridSize.value, uniforms.current.uGridSize.value);
+            const plane = new THREE.PlaneGeometry(width, height, uniforms.current.u_gridSize.value, uniforms.current.u_gridSize.value);
             // const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
 
-            const sphere_geometry = new THREE.SphereGeometry(64, 1024, 512);
+            // const sphere_geometry = new THREE.SphereGeometry(64, 1024, 512);
             const sphere_material = new THREE.ShaderMaterial({
                 uniforms: uniforms.current,
                 vertexShader: vertex,
@@ -66,11 +66,11 @@ const ThreeBackground: React.FC = () => {
                 wireframe: false,
             });
 
-            // const backdrop = new THREE.Mesh(plane, material, true);
-            const sphere = new THREE.Mesh(sphere_geometry, sphere_material);
+            const backdrop = new THREE.Mesh(plane, sphere_material, true);
+            // const sphere = new THREE.Mesh(sphere_geometry, sphere_material);
 
             // scene.add(backdrop);
-            scene.add(sphere);
+            scene.add(backdrop);
 
             // Render the scene and camera
             renderer.render(scene, camera);
@@ -83,7 +83,7 @@ const ThreeBackground: React.FC = () => {
 
                 uniforms.current.u_time.value %= 5000;
 
-                sphere.rotateOnAxis(axis, timeIncrement / 10);
+                //sphere.rotateOnAxis(axis, timeIncrement / 10);
 
                 renderer.render(scene, camera);
                 requestAnimationFrame(renderScene);
