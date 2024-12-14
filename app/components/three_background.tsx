@@ -4,17 +4,17 @@
 "use client"
 
 
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 
 import { vertex, fragment } from './js/shader.js'
 
 const res = 800;
 const grid = 600;
-const amplitude = 15;
+const amplitude = 1;
 const waveLength = .5;
 const zIndex = 80;
-const timeIncrement = .002;
+const timeIncrement = .01;
 
 const ThreeBackground: React.FC = () => {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -26,6 +26,7 @@ const ThreeBackground: React.FC = () => {
         u_gridSize: { value: grid },
         u_time: { value: 0 },
         u_resolution: { value: new THREE.Vector2(res, res) },
+        u_darkMode: { value: document.getElementsByTagName("html")[0].classList.contains("dark") ? 1 : 0 },
     })
 
     useEffect(() => {
@@ -76,9 +77,11 @@ const ThreeBackground: React.FC = () => {
 
             // Add this function inside the useEffect hook
             const renderScene = () => {
+                uniforms.current.u_darkMode.value = document.getElementsByTagName("html")[0].classList.contains("dark") ? 1 : 0;
+
                 uniforms.current.u_time.value += timeIncrement;
 
-                uniforms.current.u_time.value %= 5;
+                uniforms.current.u_time.value %= 5000;
 
                 sphere.rotateOnAxis(axis, timeIncrement / 10);
 
