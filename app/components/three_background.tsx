@@ -29,6 +29,8 @@ const ThreeBackground: React.FC = () => {
         u_darkMode: { value: document.getElementsByTagName("html")[0].classList.contains("dark") ? 1 : 0 },
     })
 
+    const webGLRender = !!window.WebGLRenderingContext;
+
     useEffect(() => {
         if (typeof window !== 'undefined' && containerRef.current.childElementCount == 0) {
             var axis = new THREE.Vector3(0.1, 1, 0).normalize();
@@ -111,11 +113,15 @@ const ThreeBackground: React.FC = () => {
         }
     }, []);
 
-    return (
-        <>
-            !!window.WebGLRenderingContext && <div ref={containerRef} />
-        </>
-    )
+    if (webGLRender) {
+        return (
+            <div ref={containerRef} />
+        )
+    } else {
+        return (
+            <div />
+        )
+    }
 };
 
 export default ThreeBackground;
