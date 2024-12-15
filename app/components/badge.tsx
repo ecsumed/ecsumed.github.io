@@ -17,6 +17,10 @@ function getBadge(text: string) {
             return <img className="me-2 rounded" alt="Static Badge" src="https://img.shields.io/badge/Markdown-000000?logo=markdown&logoColor=white" />;
         case "oauth2":
             return <img className="me-2 rounded" alt="Static Badge" src="https://img.shields.io/badge/OAuth2-EB5424?logo=auth0&logoColor=white" />;
+        case "linux":
+            return <img className="me-2 rounded" alt="Static Badge" src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white" />;
+        case "docker":
+            return <img className="me-2 rounded" alt="Static Badge" src="https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black" />;
         default:
             return <img className="me-2 rounded" alt="Static Badge" src={`https://img.shields.io/badge/${text}-326CE5`} />;
     }
