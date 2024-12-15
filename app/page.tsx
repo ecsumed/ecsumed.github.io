@@ -1,16 +1,24 @@
+"use client"
+
+import dynamic from 'next/dynamic'
+
 import localFont from "next/font/local";
-import ThreeBackground from "./components/three_background";
 
 const printClearlySans = localFont({
   src: "./fonts/PrintClearly.woff",
   weight: "100 900",
 });
 
+const DynamicBackgroundWithNoSSR = dynamic(
+  () => import('./components/three_background'),
+  { ssr: false }
+)
+
 export default function Home() {
   return (
     <div className="relative h-full">
       <div className="absolute top-0 left-0">
-        <ThreeBackground></ThreeBackground>
+        <DynamicBackgroundWithNoSSR />
       </div>
       <div className="absolute top-0 left-0 h-full">
         <div className='flex flex-col p-5 h-full'>

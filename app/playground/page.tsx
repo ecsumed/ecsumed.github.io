@@ -1,12 +1,17 @@
 "use client"
 
-import ThreeBackground from "../components/three_background";
+import dynamic from 'next/dynamic'
+
+const DynamicComponentWithNoSSR = dynamic(
+  () => import('../components/three_background'),
+  { ssr: false }
+)
 
 export default function Page() {
     return (
 
         <div className="">
-            <ThreeBackground></ThreeBackground>
+            <DynamicComponentWithNoSSR />
         </div >
     )
 }
