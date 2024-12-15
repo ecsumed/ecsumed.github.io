@@ -113,7 +113,7 @@ const ThreeBackground: React.FC = () => {
 
     return (
         <>
-            <div ref={containerRef} />
+            !!window.WebGLRenderingContext && <div ref={containerRef} />
         </>
     )
 };
