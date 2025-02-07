@@ -9,6 +9,9 @@ import * as THREE from 'three';
 
 import { vertex, fragment } from './js/shader.js'
 
+import WebGL from 'three/addons/capabilities/WebGL.js';
+
+
 const res = 800;
 const grid = 600;
 const amplitude = 1;
@@ -29,7 +32,7 @@ const ThreeBackground: React.FC = () => {
         u_darkMode: { value: document.getElementsByTagName("html")[0].classList.contains("dark") ? 1 : 0 },
     })
 
-    const webGLRender = !!window.WebGLRenderingContext;
+    const webGLRender = WebGL.isWebGL2Available();
 
     useEffect(() => {
         if (typeof window !== 'undefined' && containerRef.current.childElementCount == 0) {
