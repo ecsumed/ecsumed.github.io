@@ -20,6 +20,10 @@ const items = [
     {
         "name": "About",
         "link": "/about"
+    },
+    {
+        "name": "About2",
+        "link": "/about2"
     }
 ]
 
