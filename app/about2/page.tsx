@@ -97,7 +97,7 @@ export default function Page() {
                     <div>
                         <div className="relative flex py-4 items-center">
                             <span className="flex-shrink mx-4 text-gray-400">
-                                <h2 className="text-base font-extrabold dark:text-red-400">
+                                <h2 className="text-lg font-extrabold dark:text-red-400">
                                     SKILLS
                                 </h2>
                             </span>
@@ -124,9 +124,9 @@ export default function Page() {
                         </div>
                     </div>
                     <div>
-                        <div className="flex py-4 items-center">
+                        <div className="flex mt-10 items-center">
                             <span className="flex-shrink mx-4 text-gray-400">
-                                <h2 className="text-base font-extrabold dark:text-red-400">
+                                <h2 className="text-lg font-extrabold dark:text-red-400">
                                     Certifications
                                 </h2>
                             </span>
@@ -134,13 +134,13 @@ export default function Page() {
                         </div>
                         <div className='ml-8 mr-10'>
                             {certifications.map(certificate => (
-                                <div className="flex justify-between items-center">
+                                <div className="flex justify-between items-center my-4">
                                     <div className="text-left">
-                                        <h2 className="text-lg font-bold">{certificate.name}</h2>
-                                        <h3 className="text-base text-gray-500">{certificate.location}</h3>
+                                        <h2 className="text-base font-bold">{certificate.name}</h2>
+                                        <h3 className="text-sm text-amber-100">{certificate.location}</h3>
                                     </div>
                                     <div className="text-right">
-                                        <span className="text-gray-600">{certificate.date}</span>
+                                        <span className="text-zinc-400">{certificate.date}</span>
                                     </div>
                                 </div>
                             ))}
