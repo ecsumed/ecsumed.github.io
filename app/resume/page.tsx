@@ -94,6 +94,19 @@ export default function Page() {
         <div className='p-5 h-50 terminal h-full'>
             <TerminalCommand command={["$ whoami && cat about-me.md | renderHTML"]} delay={1000}>
                 <div className='mt-6 mb-16 p-6 rounded bg-slate-50 text-black dark:bg-zinc-900 dark:text-white'>
+
+                    <div>
+                        <div className=" mx-4 py-4 items-center">
+                            <span className="text-6xl font-thin">
+                                Fahad
+                            </span>
+                            <span className="text-6xl font-bold">
+                                Saleh
+                            </span>
+                            <h3 className="text-xl text-amber-100">Lead DevOps/SRE</h3>
+                        </div>
+                    </div>
+
                     <div>
                         <div className="relative flex py-4 items-center">
                             <span className="flex-shrink mx-4 text-gray-400">

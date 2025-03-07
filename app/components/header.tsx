@@ -22,8 +22,8 @@ const items = [
         "link": "/about"
     },
     {
-        "name": "About2",
-        "link": "/about2"
+        "name": "Resume",
+        "link": "/resume"
     }
 ]
 
