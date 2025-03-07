@@ -95,17 +95,31 @@ export default function Page() {
             <TerminalCommand command={["$ whoami && cat about-me.md | renderHTML"]} delay={1000}>
                 <div className='mt-6 mb-16 p-6 rounded bg-slate-50 text-black dark:bg-zinc-900 dark:text-white'>
 
-                    <div>
-                        <div className=" mx-4 py-4 items-center">
-                            <span className="text-6xl font-thin">
+                    <div className="md:grid md:grid-cols-4 mx-8 mb-4">
+                        <div className="flex md:justify-end">
+                            <span className="text-6xl font-extralight">
                                 Fahad
                             </span>
-                            <span className="text-6xl font-bold">
+                            <span className="text-6xl font-bold text-green-100">
                                 Saleh
                             </span>
-                            <h3 className="text-xl text-amber-100">Lead DevOps/SRE</h3>
                         </div>
+                        <div className="col-span-3 max-w-full"></div>
+
+                        <div className="col-span-1 flex md:justify-end">
+                            <h3 className="text-xl text-amber-100 font-light">Lead DevOps | SRE | Platform</h3>
+                        </div>
+                        <div className="col-span-3 max-w-full"></div>
+
+                        <div className="col-span-1 flex md:justify-end">
+                            <span>Github</span>
+                            <span>Email</span>
+                        </div>
+                        <div className="col-span-3 max-w-full"></div>
                     </div>
+
+
+
 
                     <div>
                         <div className="relative flex py-4 items-center">
@@ -160,7 +174,7 @@ export default function Page() {
                         </div>
                     </div>
                 </div>
-            </TerminalCommand>
+            </TerminalCommand >
         </div >
     )
 }
