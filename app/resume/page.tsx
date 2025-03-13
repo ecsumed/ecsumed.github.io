@@ -3,6 +3,9 @@ import { MarkdownRenderer } from '../components/markdown'
 import { TerminalCommand } from '../components/terminal'
 import path from 'path';
 
+import { Github } from 'lucide-react';
+
+
 const skills = [
     {
         name: "Languages",
