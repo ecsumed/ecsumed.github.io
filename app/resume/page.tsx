@@ -3,7 +3,9 @@ import { MarkdownRenderer } from '../components/markdown'
 import { TerminalCommand } from '../components/terminal'
 import path from 'path';
 
-import { Github } from 'lucide-react';
+import { FaGithub } from "react-icons/fa";
+import { TbWorldWww } from "react-icons/tb";
+import { FaLinkedin } from "react-icons/fa";
 
 
 const skills = [
@@ -98,8 +100,8 @@ export default function Page() {
             <TerminalCommand command={["$ whoami && cat about-me.md | renderHTML"]} delay={1000}>
                 <div className='mt-6 mb-16 p-6 rounded bg-slate-50 text-black dark:bg-zinc-900 dark:text-white'>
 
-                    <div className="md:grid md:grid-cols-4 mx-8 mb-4">
-                        <div className="flex md:justify-end">
+                    <div className="mx-4">
+                        <div className='flex flex-wrap'>
                             <span className="text-6xl font-extralight">
                                 Fahad
                             </span>
@@ -107,22 +109,32 @@ export default function Page() {
                                 Saleh
                             </span>
                         </div>
-                        <div className="col-span-3 max-w-full"></div>
 
-                        <div className="col-span-1 flex md:justify-end">
+                        <div className="flex flex-wrap px-1">
                             <h3 className="text-xl text-amber-100 font-light">Lead DevOps | SRE | Platform</h3>
                         </div>
-                        <div className="col-span-3 max-w-full"></div>
 
-                        <div className="col-span-1 flex md:justify-end">
-                            <span>Github</span>
-                            <span>Email</span>
+                        <div className="flex flex-wrap px-1">
+                            <h3 className="text-gray-400 italic font-extralight">Greater Toronto Area, Canada</h3>
                         </div>
-                        <div className="col-span-3 max-w-full"></div>
+
+                        <div className="flex flex-wrap mt-2 px-1">
+                            <a href='https://github.com/ecsumed' className='flex items-center underline'>
+                                <FaGithub />
+                                <span className='pl-1 pr-3'>ecsumed</span>
+                            </a>
+
+                            <a href='https://ecsumed.github.io' className='flex items-center underline'>
+                                <TbWorldWww />
+                                <span className='pl-1 pr-3'>ecsumed.github.io</span>
+                            </a>
+
+                            <a href='https://ca.linkedin.com/in/fahad-s-a17b19144' className='flex items-center underline'>
+                                <FaLinkedin />
+                                <span className='pl-1'>fahad-s-750562197</span>
+                            </a>
+                        </div>
                     </div>
-
-
-
 
                     <div>
                         <div className="relative flex py-4 items-center">
