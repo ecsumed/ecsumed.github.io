@@ -6,6 +6,8 @@ import path from 'path';
 import { FaGithub } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
 import { FaLinkedin } from "react-icons/fa";
+import { FaDownload } from "react-icons/fa6";
+
 
 
 const skills = [
@@ -100,7 +102,7 @@ export default function Page() {
             <TerminalCommand command={["$ whoami && cat about-me.md | renderHTML"]} delay={1000}>
                 <div className='mt-6 mb-16 p-6 rounded bg-slate-50 text-black dark:bg-zinc-900 dark:text-white'>
 
-                    <div className="mx-4">
+                    <div className="relative mx-4">
                         <div className='flex flex-wrap'>
                             <span className="text-6xl font-extralight">
                                 Fahad
@@ -141,11 +143,11 @@ export default function Page() {
                             </blockquote>
                         </div>
 
-                    </div>
-
-
-                    <div className=' absolute object-right-top'>
-                        Download
+                        <div className='absolute inset-y-5 right-5 '>
+                            <a href='https://github.com/ecsumed' className='flex items-center underline'>
+                                <FaDownload size={35}/>
+                            </a>
+                        </div>
                     </div>
 
                     <div>
