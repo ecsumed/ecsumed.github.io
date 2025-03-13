@@ -64,7 +64,9 @@ export default function Header() {
                             {items.map((item) => (
                                 <MenuItem
                                     link={item.link}
-                                    displayValue={item.name}>
+                                    displayValue={item.name}
+                                    key={item.name}
+                                    >
                                 </MenuItem>
                             ))}
                         </ul>

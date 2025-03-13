@@ -134,6 +134,18 @@ export default function Page() {
                                 <span className='pl-1'>fahad-s-750562197</span>
                             </a>
                         </div>
+
+                        <div className="flex flex-wrap mt-2 px-1">
+                            <blockquote className="text-gray-400 italic font-extralight">
+                                <p>"Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself." - Rumi</p>
+                            </blockquote>
+                        </div>
+
+                    </div>
+
+
+                    <div className=' absolute object-right-top'>
+                        Download
                     </div>
 
                     <div>
