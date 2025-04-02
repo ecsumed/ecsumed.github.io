@@ -73,21 +73,62 @@ const skills = [
     },
 ]
 
+const experiences = [
+    {
+        name: "BMO - Airmiles",
+        location: "Senior Devops Engineer",
+        date: "May 2023 - PRESENT"
+    },
+    {
+        name: "Loyalty Ventures Inc (NASDAQ:LYLT) - Airmiles",
+        location: "Senior Devops Engineer",
+        date: "Nov. 2021 - May. 2023"
+    },
+    {
+        name: "Alliance Data Systems Corporation (NYSE:ADS) - Airmiles",
+        location: "Devops Engineer III",
+        date: "Feb. 2020 - Nov. 2021"
+    },
+    {
+        name: "Cloudways.com - Gaditek Associates",
+        location: "Lead Devops Engineer",
+        date: "Jan. 2018 - Jun. 2021"
+    },
+    {
+        name: "Cloudways.com - Gaditek Associates",
+        location: "Senior Devops Engineer",
+        date: "Jan. 2017 - Jan. 2018"
+    },
+    {
+        name: "PureVPN.com - Gaditek Associates",
+        location: "Linux/DevOps Engineer",
+        date: "Nov. 2014 - Jan. 2017"
+    },
+]
+
+const educations = [
+    {
+        name: "Bachelor of Computer Science and Information Technology",
+        location: "NED University of Engineering and Technology",
+        date: "Jan. 2009 - Dec. 2012"
+    },
+]
+
 const certifications = [
     {
         name: "Certified Kubernetes Administrator",
         location: "Cloud Native Computing Foundation (CNCF)",
-        date: "January 2020 - Present"
+        date: "2021"
     },
     {
         name: "Certified AWS DevOps Engineer - Professional",
-        location: "AWS",
-        date: "January 2020 - Present"
+        location: "Amazon Web Services Training and Certification",
+        date: "2021"
     },
     {
         name: "Certified AWS Solutions Architect - Associate",
-        location: "AWS",
-        date: "January 2020 - Present"
+        location: "Amazon Web Services Training and Certification",
+        date: "2019"
     },
 ]
 export default function Page() {
@@ -179,6 +220,55 @@ export default function Page() {
                             </div>
                         </div>
                     </div>
+
+                    <div>
+                        <div className="flex mt-10 items-center">
+                            <span className="flex-shrink mx-4 text-gray-400">
+                                <h2 className="text-lg font-extrabold dark:text-red-400">
+                                    Work Experience
+                                </h2>
+                            </span>
+                            <div className="flex-grow border-t border-gray-400"></div>
+                        </div>
+                        <div className='ml-8 mr-10'>
+                            {experiences.map(experience => (
+                                <div className="flex justify-between items-center my-4">
+                                    <div className="text-left">
+                                        <h2 className="text-base font-bold">{experience.name}</h2>
+                                        <h3 className="text-sm text-amber-100 uppercase">{experience.location}</h3>
+                                    </div>
+                                    <div className="text-right">
+                                        <span className="text-zinc-400">{experience.date}</span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div>
+                        <div className="flex mt-10 items-center">
+                            <span className="flex-shrink mx-4 text-gray-400">
+                                <h2 className="text-lg font-extrabold dark:text-red-400">
+                                    Education
+                                </h2>
+                            </span>
+                            <div className="flex-grow border-t border-gray-400"></div>
+                        </div>
+                        <div className='ml-8 mr-10'>
+                            {educations.map(education => (
+                                <div className="flex justify-between items-center my-4">
+                                    <div className="text-left">
+                                        <h2 className="text-base font-bold">{education.name}</h2>
+                                        <h3 className="text-sm text-amber-100">{education.location}</h3>
+                                    </div>
+                                    <div className="text-right">
+                                        <span className="text-zinc-400">{education.date}</span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
                     <div>
                         <div className="flex mt-10 items-center">
                             <span className="flex-shrink mx-4 text-gray-400">
