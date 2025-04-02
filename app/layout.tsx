@@ -63,7 +63,7 @@ export default function RootLayout({
             <div className="grid grid-cols-[3fr_94fr_3fr] mb-10 overflow-y-auto" style={{ scrollbarGutter: "stable" }}>
               <div className="col-start-2 border-solid border-t border-stone-700 dark:border-[#e5e1e1]">
                 <span className="pl-1 font-thin text-sm text-slate-500 dark:text-neutral-400">
-                  All code my own. Snippets borrowed here and there. Inspired by <a className="underline" href="https://p5aholic.me/">Keita Yamada</a>
+                  All code my own. Snippets borrowed here and there. Design inspired by <a className="underline" href="https://p5aholic.me/">Keita Yamada</a>
                 </span>
               </div>
               <div className=""></div>
@@ -75,23 +75,3 @@ export default function RootLayout({
     </html >
   );
 }
-
-/* <div>
-            <div className="relative m-8 md:m-16 border-solid border border-stone-700 dark:border-[#e5e1e1]">
-              <div className="-mt-6">
-                <Header></Header>
-              </div>
-              <div className="">
-                {children}
-              </div>
-
-            </div>
-            <div className="mt-6 fixed top-2 right-2 md:top-10 md:right-10 vertical-text">
-              <ThemeSwitch></ThemeSwitch>
-            </div>
-            <div className="mt-6 fixed bottom-2 left-2 md:bottom-12 md:left-16 font-thin">
-              <span className="font-thin text-sm text-slate-500 dark:text-neutral-400">
-              All code my own. Snippets borrowed here and there. Inspired by <a className="underline" href="https://p5aholic.me/">Keita Yamada</a>
-              </span>
-            </div>
-          </div> */
