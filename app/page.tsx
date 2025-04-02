@@ -38,10 +38,8 @@ export default function Home() {
           <div className="grid grid-cols-6">
             <div className="col-span-4 max-w-full"></div>
             <span className="col-span-2 font-medium text-lg whitespace-pre-wrap">
-              I like trying to find bottleneck issues in
-              large, distributed systems,
-              ensuring optimal performance and reliability.
-              And learning new stuff.
+              I enjoy picking up new skills and exploring new tech,
+              and I love working with large distributed systems!
             </span>
           </div>
           <div className="flex flex-1">
