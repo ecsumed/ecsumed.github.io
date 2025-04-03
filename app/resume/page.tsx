@@ -75,17 +75,17 @@ const skills = [
 
 const experiences = [
     {
-        name: "BMO - Airmiles",
+        name: "Airmiles - BMO",
         location: "Senior Devops Engineer",
         date: "May 2023 - PRESENT"
     },
     {
-        name: "Loyalty Ventures Inc (NASDAQ:LYLT) - Airmiles",
+        name: "Airmiles - Loyalty Ventures Inc (NASDAQ:LYLT)",
         location: "Senior Devops Engineer",
         date: "Nov. 2021 - May. 2023"
     },
     {
-        name: "Alliance Data Systems Corporation (NYSE:ADS) - Airmiles",
+        name: "Airmiles - Alliance Data Systems Corporation (NYSE:ADS)",
         location: "Devops Engineer III",
         date: "Feb. 2020 - Nov. 2021"
     },
