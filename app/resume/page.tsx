@@ -76,32 +76,35 @@ const skills = [
 const experiences = [
     {
         name: "Airmiles - BMO",
-        location: "Senior Devops Engineer",
+        role: "Senior Devops Engineer",
+        location: "Toronto, Canada",
         date: "May 2023 - PRESENT"
     },
     {
         name: "Airmiles - Loyalty Ventures Inc (NASDAQ:LYLT)",
-        location: "Senior Devops Engineer",
+        role: "Senior Devops Engineer",
+        location: "Toronto, Canada",
         date: "Nov. 2021 - May. 2023"
     },
     {
         name: "Airmiles - Alliance Data Systems Corporation (NYSE:ADS)",
-        location: "Devops Engineer III",
+        role: "Devops Engineer III",
+        location: "Toronto, Canada",
         date: "Feb. 2020 - Nov. 2021"
     },
     {
         name: "Cloudways.com - Gaditek Associates",
-        location: "Lead Devops Engineer",
+        role: "Lead Devops Engineer",
         date: "Jan. 2018 - Jun. 2021"
     },
     {
         name: "Cloudways.com - Gaditek Associates",
-        location: "Senior Devops Engineer",
+        role: "Senior Devops Engineer",
         date: "Jan. 2017 - Jan. 2018"
     },
     {
         name: "PureVPN.com - Gaditek Associates",
-        location: "Linux/DevOps Engineer",
+        role: "Linux/DevOps Engineer",
         date: "Nov. 2014 - Jan. 2017"
     },
 ]
@@ -148,17 +151,17 @@ export default function Page() {
                             <span className="text-6xl font-extralight">
                                 Fahad
                             </span>
-                            <span className="text-6xl font-bold text-green-100">
+                            <span className="text-6xl font-bold text-emerald-700 dark:text-emerald-300">
                                 Saleh
                             </span>
                         </div>
 
                         <div className="flex flex-wrap px-1">
-                            <h3 className="text-xl text-amber-100 font-light">Lead DevOps | SRE | Platform</h3>
+                            <h3 className="text-xl dark:text-amber-100 text-amber-800 font-light">Lead DevOps | SRE | Platform</h3>
                         </div>
 
                         <div className="flex flex-wrap px-1">
-                            <h3 className="text-gray-400 italic font-extralight">Greater Toronto Area, Canada</h3>
+                            <h3 className="dark:text-gray-400 text-stone-600 italic font-extralight">Greater Toronto Area, Canada</h3>
                         </div>
 
                         <div className="flex flex-wrap mt-2 px-1">
@@ -179,7 +182,7 @@ export default function Page() {
                         </div>
 
                         <div className="flex flex-wrap mt-2 px-1">
-                            <blockquote className="text-gray-400 italic font-extralight">
+                            <blockquote className="dark:text-gray-400 text-stone-600 italic font-extralight">
                                 <p>"Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself." - Rumi</p>
                             </blockquote>
                         </div>
@@ -194,7 +197,7 @@ export default function Page() {
                     <div>
                         <div className="relative flex py-4 items-center">
                             <span className="flex-shrink mx-4 text-gray-400">
-                                <h2 className="text-lg font-extrabold dark:text-red-400">
+                                <h2 className="text-lg font-extrabold  text-red-400">
                                     SKILLS
                                 </h2>
                             </span>
@@ -203,7 +206,7 @@ export default function Page() {
                         <div className='ml-8 mr-10'>
                             <div className='grid grid-cols-3 gap-6'>
                                 {skills.map(skill => (
-                                    <div className="bg-[#24292ac4] p-4 rounded-sm">
+                                    <div className="dark:bg-[#24292ac4] bg-[#f4f0e8] p-4 rounded-sm">
                                         <h2 className="text-base font-bold">
                                             {skill.name}
                                         </h2>
@@ -224,7 +227,7 @@ export default function Page() {
                     <div>
                         <div className="flex mt-10 items-center">
                             <span className="flex-shrink mx-4 text-gray-400">
-                                <h2 className="text-lg font-extrabold dark:text-red-400">
+                                <h2 className="text-lg font-extrabold text-red-400">
                                     Work Experience
                                 </h2>
                             </span>
@@ -235,10 +238,11 @@ export default function Page() {
                                 <div className="flex justify-between items-center my-4">
                                     <div className="text-left">
                                         <h2 className="text-base font-bold">{experience.name}</h2>
-                                        <h3 className="text-sm text-amber-100 uppercase">{experience.location}</h3>
+                                        <h3 className="text-sm dark:text-amber-100 text-amber-800 uppercase">{experience.role}</h3>
                                     </div>
                                     <div className="text-right">
-                                        <span className="text-zinc-400">{experience.date}</span>
+                                        <h2 className="text-zinc-600 dark:text-zinc-200">{experience.date}</h2>
+                                        <h3 className="text-zinc-500 dark:text-zinc-400 italic">{experience.location}</h3>
                                     </div>
                                 </div>
                             ))}
@@ -248,7 +252,7 @@ export default function Page() {
                     <div>
                         <div className="flex mt-10 items-center">
                             <span className="flex-shrink mx-4 text-gray-400">
-                                <h2 className="text-lg font-extrabold dark:text-red-400">
+                                <h2 className="text-lg font-extrabold text-red-400">
                                     Education
                                 </h2>
                             </span>
@@ -259,10 +263,10 @@ export default function Page() {
                                 <div className="flex justify-between items-center my-4">
                                     <div className="text-left">
                                         <h2 className="text-base font-bold">{education.name}</h2>
-                                        <h3 className="text-sm text-amber-100">{education.location}</h3>
+                                        <h3 className="text-sm dark:text-amber-100 text-amber-800">{education.location}</h3>
                                     </div>
                                     <div className="text-right">
-                                        <span className="text-zinc-400">{education.date}</span>
+                                        <span className="text-zinc-600 dark:text-zinc-200">{education.date}</span>
                                     </div>
                                 </div>
                             ))}
@@ -272,7 +276,7 @@ export default function Page() {
                     <div>
                         <div className="flex mt-10 items-center">
                             <span className="flex-shrink mx-4 text-gray-400">
-                                <h2 className="text-lg font-extrabold dark:text-red-400">
+                                <h2 className="text-lg font-extrabold text-red-400">
                                     Certifications
                                 </h2>
                             </span>
@@ -283,10 +287,10 @@ export default function Page() {
                                 <div className="flex justify-between items-center my-4">
                                     <div className="text-left">
                                         <h2 className="text-base font-bold">{certificate.name}</h2>
-                                        <h3 className="text-sm text-amber-100">{certificate.location}</h3>
+                                        <h3 className="text-sm dark:text-amber-100 text-amber-800">{certificate.location}</h3>
                                     </div>
                                     <div className="text-right">
-                                        <span className="text-zinc-400">{certificate.date}</span>
+                                        <span className="text-zinc-600 dark:text-zinc-200">{certificate.date}</span>
                                     </div>
                                 </div>
                             ))}
