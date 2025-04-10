@@ -1,7 +1,4 @@
-import { readFile } from '@/lib/markdown';
-import { MarkdownRenderer } from '../components/markdown'
 import { TerminalCommand } from '../components/terminal'
-import path from 'path';
 
 import { FaGithub } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
@@ -135,11 +132,6 @@ const certifications = [
     },
 ]
 export default function Page() {
-    const contentDirectory = path.join(process.cwd(), 'content');
-
-    const fullPath = path.join(contentDirectory, 'about-me.md');
-    const fileContents = readFile(fullPath)
-
     return (
 
         <div className='p-5 h-50 terminal h-full'>
@@ -183,7 +175,7 @@ export default function Page() {
 
                         <div className="flex flex-wrap mt-2 px-1">
                             <blockquote className="dark:text-gray-400 text-stone-600 italic font-extralight">
-                                <p>"Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself." - Rumi</p>
+                                <p>&quot;Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.&quot; - Rumi</p>
                             </blockquote>
                         </div>
 
