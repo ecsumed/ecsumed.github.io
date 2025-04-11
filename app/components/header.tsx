@@ -7,34 +7,39 @@ import { usePathname } from 'next/navigation'
 const items = [
     {
         "name": "Home",
-        "link": "/"
+        "link": "/",
+        "extra_classes": ""
     },
     {
         "name": "Posts",
-        "link": "/posts"
+        "link": "/posts",
+        "extra_classes": ""
     },
     {
         "name": "Experiment",
-        "link": "/playground"
+        "link": "/playground",
+        "extra_classes": ""
     },
     {
         "name": "About",
-        "link": "/about"
+        "link": "/about",
+        "extra_classes": "line-through"
     },
     {
         "name": "Resume",
-        "link": "/resume"
+        "link": "/resume",
+        "extra_classes": ""
     }
 ]
 
-function MenuItem({ link, displayValue }) {
+function MenuItem({ link, displayValue, extra_classes }) {
     const currentPath = usePathname();
 
     let item;
     if (currentPath != link) {
         item = (
             <Link href={`${link}`} className="group transition-all duration-300 ease-in-out">
-                <span className="bg-left-bottom bg-gradient-to-r from-amber-600 to-amber-600 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                <span className={`bg-left-bottom bg-gradient-to-r from-amber-600 to-amber-600 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out ${extra_classes}`}>
                     {displayValue}
                 </span>
             </Link>
@@ -66,6 +71,7 @@ export default function Header() {
                                     link={item.link}
                                     displayValue={item.name}
                                     key={item.name}
+                                    extra_classes={item.extra_classes}
                                     >
                                 </MenuItem>
                             ))}
