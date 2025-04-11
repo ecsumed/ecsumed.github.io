@@ -4,7 +4,10 @@ import { FaGithub } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
 import { FaLinkedin } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa6";
-
+import { FaTools } from "react-icons/fa";
+import { BiWorld } from "react-icons/bi";
+import { FaGraduationCap } from "react-icons/fa";
+import { FaCertificate } from "react-icons/fa6";
 
 
 const skills = [
@@ -181,15 +184,16 @@ export default function Page() {
 
                         <div className='absolute inset-y-5 right-5'>
                             <a target="_blank" href='https://drive.google.com/file/d/1N5HygggHvahpgdHLQBy0vOWLhAWXDuRG/view?usp=drivesdk' rel="noopener noreferrer" className='flex items-center underline'>
-                                <FaDownload size={35}/>
+                                <FaDownload size={35} />
                             </a>
                         </div>
                     </div>
 
                     <div>
                         <div className="relative flex py-4 items-center">
-                            <span className="flex-shrink mx-4 text-gray-400">
-                                <h2 className="text-lg font-extrabold  text-red-400">
+                            <span className="flex flex-shrink mx-4 items-center">
+                                <FaTools className='text-red-400' />
+                                <h2 className="text-lg font-extrabold pl-2 text-red-400">
                                     SKILLS
                                 </h2>
                             </span>
@@ -218,8 +222,9 @@ export default function Page() {
 
                     <div>
                         <div className="flex mt-10 items-center">
-                            <span className="flex-shrink mx-4 text-gray-400">
-                                <h2 className="text-lg font-extrabold text-red-400">
+                            <span className="flex flex-shrink mx-4 items-center">
+                                <BiWorld className='text-red-400' />
+                                <h2 className="text-lg font-extrabold pl-2 text-red-400">
                                     Work Experience
                                 </h2>
                             </span>
@@ -243,8 +248,9 @@ export default function Page() {
 
                     <div>
                         <div className="flex mt-10 items-center">
-                            <span className="flex-shrink mx-4 text-gray-400">
-                                <h2 className="text-lg font-extrabold text-red-400">
+                            <span className="flex flex-shrink mx-4 items-center">
+                                <FaGraduationCap className='text-red-400' />
+                                <h2 className="text-lg font-extrabold pl-2 text-red-400">
                                     Education
                                 </h2>
                             </span>
@@ -267,8 +273,9 @@ export default function Page() {
 
                     <div>
                         <div className="flex mt-10 items-center">
-                            <span className="flex-shrink mx-4 text-gray-400">
-                                <h2 className="text-lg font-extrabold text-red-400">
+                            <span className="flex flex-shrink mx-4 items-center">
+                                <FaCertificate className='text-red-400' />
+                                <h2 className="text-lg font-extrabold pl-2 text-red-400">
                                     Certifications
                                 </h2>
                             </span>
