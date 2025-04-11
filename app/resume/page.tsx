@@ -196,7 +196,7 @@ export default function Page() {
                             <div className="flex-grow border-t border-gray-400"></div>
                         </div>
                         <div className='ml-8 mr-10'>
-                            <div className='grid grid-cols-3 gap-6'>
+                            <div className='flex-wrap grid grid-cols-1 md:grid-cols-3 gap-6'>
                                 {skills.map(skill => (
                                     <div className="dark:bg-[#24292ac4] bg-[#f4f0e8] p-4 rounded-sm">
                                         <h2 className="text-base font-bold">
