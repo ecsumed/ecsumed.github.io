@@ -63,7 +63,7 @@ export default function RootLayout({
             <div className="grid grid-cols-[3fr_94fr_3fr] mb-10 overflow-y-auto" style={{ scrollbarGutter: "stable" }}>
               <div className="col-start-2 border-solid border-t border-stone-700 dark:border-[#e5e1e1]">
                 <span className="pl-1 font-thin text-sm text-slate-500 dark:text-neutral-400">
-                  All code my own. Snippets borrowed here and there. Design inspired by <a className="underline" href="https://p5aholic.me/">Keita Yamada</a>
+                  All code my own. Design inspired by <a className="underline" href="https://p5aholic.me/">Keita Yamada</a>
                 </span>
               </div>
               <div className=""></div>
