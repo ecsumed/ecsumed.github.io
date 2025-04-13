@@ -72,19 +72,13 @@ const skills = [
         ]
     },
 ]
-
+//May 2023
 const experiences = [
-    {
-        name: "Airmiles - BMO",
-        role: "Senior Devops Engineer",
-        location: "Toronto, Canada",
-        date: "May 2023 - PRESENT"
-    },
     {
         name: "Airmiles - Loyalty Ventures Inc (NASDAQ:LYLT)",
         role: "Senior Devops Engineer",
         location: "Toronto, Canada",
-        date: "Nov. 2021 - May. 2023"
+        date: "Nov. 2021 - PRESENT"
     },
     {
         name: "Airmiles - Alliance Data Systems Corporation (NYSE:ADS)",
@@ -170,7 +164,7 @@ export default function Page() {
                                 <span className='pl-1 pr-3'>ecsumed.github.io</span>
                             </a>
 
-                            <a href='https://ca.linkedin.com/in/fahad-s-a17b19144' className='flex items-center underline'>
+                            <a href='https://ca.linkedin.com/in/fahad-s-750562197' className='flex items-center underline'>
                                 <FaLinkedin />
                                 <span className='pl-1'>fahad-s-750562197</span>
                             </a>
