@@ -18,7 +18,7 @@ export const ListPost = ({ post }) => {
             </Link>
             <div className='flex flex-wrap align-middle'>
                 {post.tags.map((tag: string) => (
-                    <Link href={`/posts/${tag}`} className='pr-1 py-0.5 transition delay-0 duration-150 ease-in-out hover:scale-110'>
+                    <Link key={tag} href={`/posts/${tag}`} className='pr-1 py-0.5 transition delay-0 duration-150 ease-in-out hover:scale-110'>
                         <Badge text={tag}></Badge>
                     </Link>
                 ))}

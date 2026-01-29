@@ -13,7 +13,7 @@ export default function Page() {
         <div className='p-5 terminal h-full'>
             <TerminalCommand command={["$ ", "$ ls -lggo", "$ ls -lgo"]} delay={1000} preRenderFirstString={true}>
                 {posts.map((post) => (
-                    <ListPost post={post}/>
+                    <ListPost key={post.id || post.slug} post={post}/>
                 ))}
             </TerminalCommand>
         </div >

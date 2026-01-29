@@ -196,7 +196,7 @@ export default function Page() {
                         <div className='ml-8 mr-10'>
                             <div className='flex-wrap grid grid-cols-1 md:grid-cols-3 gap-6'>
                                 {skills.map(skill => (
-                                    <div className="dark:bg-[#24292ac4] bg-[#f4f0e8] p-4 rounded-sm">
+                                    <div key={skill.name} className="dark:bg-[#24292ac4] bg-[#f4f0e8] p-4 rounded-sm">
                                         <h2 className="text-base font-bold">
                                             {skill.name}
                                         </h2>
@@ -204,7 +204,7 @@ export default function Page() {
                                         <div className='flex'>
                                             <div className='flex flex-wrap'>
                                                 {skill.values.map((item) => (
-                                                    <span className="w-fit p-1 my-2 mr-4 bg-[#1E4F3D] text-amber-100">{item}</span>
+                                                    <span key={item} className="w-fit p-1 my-2 mr-4 bg-[#1E4F3D] text-amber-100">{item}</span>
                                                 ))}
                                             </div>
                                         </div>
@@ -226,7 +226,7 @@ export default function Page() {
                         </div>
                         <div className='ml-8 mr-10'>
                             {experiences.map(experience => (
-                                <div className="flex justify-between items-center my-4">
+                                <div key={experience.date} className="flex justify-between items-center my-4">
                                     <div className="text-left">
                                         <h2 className="text-base font-bold">{experience.name}</h2>
                                         <h3 className="text-sm dark:text-amber-100 text-amber-800 uppercase">{experience.role}</h3>
@@ -252,7 +252,7 @@ export default function Page() {
                         </div>
                         <div className='ml-8 mr-10'>
                             {educations.map(education => (
-                                <div className="flex justify-between items-center my-4">
+                                <div key={education.name} className="flex justify-between items-center my-4">
                                     <div className="text-left">
                                         <h2 className="text-base font-bold">{education.name}</h2>
                                         <h3 className="text-sm dark:text-amber-100 text-amber-800">{education.location}</h3>
@@ -277,7 +277,7 @@ export default function Page() {
                         </div>
                         <div className='ml-8 mr-10'>
                             {certifications.map(certificate => (
-                                <div className="flex justify-between items-center my-4">
+                                <div key={certificate.name} className="flex justify-between items-center my-4">
                                     <div className="text-left">
                                         <h2 className="text-base font-bold">{certificate.name}</h2>
                                         <h3 className="text-sm dark:text-amber-100 text-amber-800">{certificate.location}</h3>
