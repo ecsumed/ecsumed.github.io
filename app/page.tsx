@@ -38,13 +38,24 @@ export default function Home() {
           <div className="grid grid-cols-6">
             <div className="col-span-4 max-w-full"></div>
             <span className="col-span-2 font-medium text-lg whitespace-pre-wrap">
-              I enjoy picking up new skills and exploring new tech,
-              and I love working with large distributed systems!
+              Large distributed systems. Reliability. Tech.
             </span>
           </div>
           <div className="flex flex-1">
             <div className="pl-6 content-end">
               <span>Currently reading: <a className="underline" href="https://thebookofshaders.com/">The Book of Shaders</a></span>
+            </div>
+
+
+
+            <div className="pl-12 self-center flex flex-col items-start">
+              <span className="font-bold text-slate-900 dark:text-white text-left">
+                Projects
+              </span>
+
+              <ul className="mt-2 text-left text-sm text-slate-600 dark:text-zinc-400 space-y-1">
+                <li className='underline'><a href="https://github.com/ecsumed/pane">Pane (watch + tmux-resurrect)</a></li>
+              </ul>
             </div>
           </div>
         </div >
