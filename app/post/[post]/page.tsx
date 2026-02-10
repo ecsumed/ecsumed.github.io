@@ -40,13 +40,13 @@ export default async function Page({
     <div className='px-5 pt-5 terminal h-full'>
       <TerminalCommand command={["$ ", `$ cat posts/${postID}.md | renderHTML`]} delay={1000}>
       <div className="p-2 font-[family-name:var(--font-geist-sans)]">
-          <div className="">
+          {/* <div className="">
             <Image width="0"
               height="0"
               sizes="100vw"
               className="w-full h-48" src={`/content/images/${post.img}`} alt="Post header image">
             </Image>
-          </div>
+          </div> */}
 
           <div className='mt-5 mx-5'>
             <div className="">

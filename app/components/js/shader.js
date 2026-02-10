@@ -155,9 +155,12 @@ void main() {
 
     vec3 color = vec3(0.);
     if (u_darkMode == 0.0){
-      color = vec3(1. - n*0.1, 1. - n*-0.100, 1. - n*.1);
+      //color = vec3(1. - n*0.1, 1. - n*-0.100, 1. - n*.1);
+      //color = vec3(1. - n*0.1, 1. - n*-0.001,  1. - n*-.001);
+      color = vec3(1.0, 1.0 - n*0.06, 1.0 - n*0.06);
     } else {
-      color = vec3(n*0.1, n*-0.100, n*.1);
+      // color = vec3(n*0.1, n*-0.100, n*.1);
+      color = vec3(n*0.15, 0, 0);
     }
     
     
