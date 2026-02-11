@@ -171,7 +171,7 @@ export function PreRenderer({ children, codeTheme, ...props }: any) {
                     padding: '1rem',
                     fontSize: '0.85rem',
                     lineHeight: '1.6',
-                    background: 'transparent',
+                    //background: 'transparent',
                 }}
                 lineProps={{ style: { wordBreak: 'normal', overflowWrap: 'break-word', whiteSpace: 'pre-wrap' } }}
                 wrapLines={true}
